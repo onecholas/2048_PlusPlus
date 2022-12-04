@@ -1,0 +1,43 @@
+1. The game begins with a random combination of two (total) 2-tiles and 4-tiles.
+    Play the game multiple times (e.g. press play, close out of the window, play
+     again, etc. If line 338 (srand(time(0));) in model.cxx is commented out,
+     this may not work.
+2. The arrow keys are used to control movement of the tiles. The up arrow moves
+   all the free tiles up, the down arrow moves all the free tiles down, the
+   right arrow moves all the free tiles to the right, and the left arrow moves
+   all the free tiles to the left. (4 covers whether all the tiles are able to
+   move, or free)
+    Play the game, using each arrow key.
+3. Each numbered tile is a different color (e.g. 2 is tan, 4 is darker tan,
+   etc.)
+    Play the game -- each tile that spawns is a different color. To place
+    most of the possible tiles on the board, uncomment lines 24 through 38 in
+    model.cxx and comment out lines 22 and 23. The score will not update
+    correctly because this is not an intended function of the game.
+4. The tiles move with only if there is empty space (e.g. moving to the left
+   using the arrow key if there are no blank spaces to the left will do
+   nothing).
+    Play the game, using each arrow key.
+5. The score is kept in the top right corner of the screen, defined by the sum
+   of all tiles that have ever been on the board.
+    Play the game, using each arrow key.
+6. For every new move, a new (either 2 or 4) tile appears randomly on the board
+   in spaces without tiles.
+    Play the game, using each arrow key.
+7. Two tiles merge if they have the same number and are pushed together.
+    Play the game, using each arrow key.
+8. If a 2048 tile appears on the board, the user has won the game and a "You
+   won the game" message appears on the board. The user is given the option to
+   continue.
+    Play the game, using each arrow key. To test this functionality without
+    having to play the entire game, change the winningtile_ member to initialize
+    to a lower number such as 16 or 32 (line 13 in model.cxx).
+9. If the board is full, with no more possible merges, the user has lost and a
+   "You lost the game" message appears on the board. The user is given the
+   option to restart.
+    Play the game, using the arrow keys, until there are no more spaces left and
+    no mmore possible merges.
+10. The game keeps track of the time allotted in the top right hand corner.
+    Play the game, using the arrow keys. The timer stops when the user has lost
+    or won the game, continues if they choose to continue, and restarts if they
+    choose to restart.
